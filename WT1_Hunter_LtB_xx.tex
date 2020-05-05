@@ -1,0 +1,23 @@
+\documentclass[paper=a4,12pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
+\input{pre-packages}
+\input{pre-newcommand}
+\input{pre-Seitenlayout}
+
+\newcommand{\eintrag}{1} % nummer des eintrags
+
+\newcommand{\titelLV}{Werkstofftechnik 1} % titel der LV
+
+\newcommand{\dateofLV}{30. April 2020} % datum der LV
+\newcommand{\deadline}{07. Mai 2020} % datum der abgabe
+
+\newcommand{\untertitela}{Lerntagebuch: Eintrag \eintrag}
+\newcommand{\name}{Herr Dennis Hunter} % mein name
+\newcommand{\matrikel}{1141919} % matrikelnummer
+
+%\newcommand{\datum}{}
+
+\begin{document}
+    \input{entries/\eintrag/deck}
+    \newpage
+    \input{entries/\eintrag/entry}    
+\end{document}}
