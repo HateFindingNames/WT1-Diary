@@ -1,0 +1,37 @@
+\documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
+\input{pre-packages}
+\input{pre-newcommand}
+\input{pre-Seitenlayout}
+\input{pre-Kopf-Fusszeile-2010}
+\input{pre-Kopf-Fusszeilen-text-Bericht}
+\newcommand{\titelLV}{Werkstofftechnik 1}
+%---------------------------- VARIABLEN festlegen ------------------
+%----------- TITEL
+\newcommand{\untertitela}{Lerntagebuch} % Titel einfügen
+% -------- Student 1
+\newcommand{\nameA}{Herr Dennis Hunter}
+% --------- Student 2
+%\newcommand{\nameB}{Frau Student zwei}
+% --------- Student 3, falls vorhanden
+%\newcommand{\nameC}{Mehr Studenten}
+%\newcommand{\datum}{Datum} % Datum einfügen
+%::::::::::::::::::::::::::::::::::
+\begin{document}
+%-----------------------------------------------------------------
+\input{Titelblatt}
+%-----------------------------------------------------
+\tableofcontents
+\newpage
+%--------------------
+\input{Eintrag1}
+\input{Eintrag2}
+%-------------------
+\newpage
+\listoffigures 
+\listoftables
+%\bibliography{Fertigungsverfahren-Stud-bib}
+\bibliographystyle{unsrtdin}
+\appendix
+\chapter{Anhang}
+%==========================================
+\end{document}
