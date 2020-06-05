@@ -1,4 +1,4 @@
-\documentclass[paper=a4,12pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
+\documentclass[paper=a4,12pt,titlepage,twoside=false,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc,]{scrreprt}
 \usepackage[a4paper,left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
 \usepackage[onehalfspacing]{setspace}
 
@@ -6,18 +6,22 @@
 \input{pre-newcommand}
 \input{pre-Seitenlayout}
 
-\newcommand{\eintrag}{1} % nummer des eintrags
+\renewcommand{\theequation}{\eintrag.\arabic{equation}} % formatiert mir den gleichungencounter entsprechend [logbucheintrag.gleichungsnummer]
+\renewcommand{\thefigure}{\eintrag.\arabic{figure}}
+
+\newcommand{\eintrag}{5} % nummer des eintrags
 
 \newcommand{\titelLV}{Werkstofftechnik 1} % titel der LV
 
-\newcommand{\dateofLV}{30. April 2020} % datum der LV
-\newcommand{\deadline}{07. Mai 2020} % datum der abgabe
+\newcommand{\dateofLV}{28. Mai 2020} % datum der LV
+\newcommand{\deadline}{4. Juni 2020} % datum der abgabe
 
 \newcommand{\untertitela}{Lerntagebuch: Eintrag \eintrag}
 \newcommand{\name}{Herr Dennis Hunter} % mein name
 \newcommand{\matrikel}{1141919} % matrikelnummer
 
 %\newcommand{\datum}{}
+\usepackage{microtype} % reduziert die anzahl der silbentrennungen
 
 \begin{document}
     \input{entries/\eintrag/deck}
