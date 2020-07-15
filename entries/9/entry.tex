@@ -1,0 +1,97 @@
+In unsrer letzten Session soll es um Wärmebehandlung von Stählen gehen. Aber warum möchte jemand das tun? Und wie?
+Wie so oft geht es hier um die gezielte manipulation bestimmter Eigenschaften des Stahls. Wir hatten ja bereits besprochen,
+dass das ganz gut durch dosierte Zugabe von Kohlenstoff zum Eisen funktioniert. Weiter lassen sich durch Temperaturprofile
+die Gefügestrukturen und -zusammensetzungen in gewünschte Richtungen lenken. So, wie ich das nun verstanden habe geht es
+hier nun um die Situation nach der Halbzeugherstellung oder in anderen Worten - die nochmalige Änderung der vorliegenden
+Materialeigenschaften durch gezielte Wärmebehandlung.
+
+Welche Arten der Wärmebehandlung gibt es (ohne Anspruch der Vollständigkeit)?
+
+Glühen:
+Das Verfahren des Glühens lässt sich in drei grundlegende Schritte einteilen
+\begin{enumerate}
+    \item Erwärmen zur Solltemperatur
+    \item Halten der Solltemperatur
+    \item Abkühlen auf Raumtemperatur
+\end{enumerate}
+Je nach Ziel des des Glühens gibt es hier nochmals verschiedene Bezeichnungen mit jeweils eigenen Temperaturprofilen.
+
+{
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[h]
+    \begin{adjustbox}{width=1\textwidth}
+        \begin{tabular}{@{}llll@{}}
+            \toprule
+            \textbf{Glühen} &
+            \textbf{Zweck} &
+            \textbf{Temperaturprofil} &
+            \textbf{Phys. Hintergrund} \\ \midrule
+            Normalglühen &
+             Steigerung der Festigkeit und Zähigkeit &
+             \begin{tabular}[c]{@{}l@{}}\(20-50 \SI[]{}{\celsius}\) oberhalb der GS-Linie\\ langsames Abkühlen\end{tabular} &
+             \begin{tabular}[c]{@{}l@{}}Verkleinerung der Korngröße\\ durch zweimalige Umwandlung\\ des Gefüges \(\alpha \rightarrow \gamma \rightarrow \alpha\)\end{tabular} \\
+            Diffusionsglühen &
+             \begin{tabular}[c]{@{}l@{}}Homogenere Verteilung der Fremdatome bspw.\\ zur Steigerung der Korrosionsfestigkeit\end{tabular} &
+             \begin{tabular}[c]{@{}l@{}}\(1050-1300 \SI[]{}{\celsius}\)\\ Haltezeit bis zu 50h\\ langsames Abkühlen\end{tabular} &
+             \begin{tabular}[c]{@{}l@{}}Konzentrationsungleichgewichte sich können durch\\ hohe Temperatur und lange Haltezeit\\ hin zum thermischen Gleichgewicht verschieben\end{tabular} \\
+            Spannungsarmglühen &
+             \begin{tabular}[c]{@{}l@{}}Entfernen von durch bearbeitende Prozesse\\ wie Tiefziehen verursachten inneren Spannungen\\ unter Beibehalt der sonstigen Eigenschaften\end{tabular} &
+             \begin{tabular}[c]{@{}l@{}}\(550-650 \SI[]{}{\celsius}\)\\ ganz langsames Abkühlen\end{tabular} &
+             Ausheilen von Versetzungen \\
+            Weichglühen &
+             Reduktion der Härte \(\rightarrow\) bessere Verformbarkeit &
+             \begin{tabular}[c]{@{}l@{}}\(680-780 \SI[]{}{\celsius}\)\\ langsames Abkühlen\end{tabular} &
+             Reduktion streifenförmiger Zementitkörner \\ \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+\end{table}
+}
+
+Der Spezialfall Härten kann im Grunde oben in das Normalglühen sortiert werden, untergliedert sich aber nochmal durch die
+angewandte Abkühlrate und das dadurch bedingte Verhältnis von Martensit zu Ferrit/Perlit für untereutektische bzw. Martensit
+und Zementit/Perlit für übereutektische Stähle. Je höher die Abkühlrate desto härter der Stahl bis hin zum \textit{glasharten}
+Stahl. Das klassische härten findet durch Abschrecken in Wasser statt und muss anschließend ein weiteres mal Wärmebehandelt
+(angelassen) werden um technisch einsetzbar sein zu können. In der realität wird oft bloß die Oberfläche gehärtet
+während ein vergleichsweise duktiler Kern über bleibt. So soll das Werkstück verschleißarm werden bei gleichzeitig hoher
+Bruchfestigkeit.\newpage
+
+Wie wird in der Praxis Härte gemessen?
+Es haben sich gemäß Vorlesung die genormten Härteprüfverfahren nach
+\begin{itemize}
+    \item Brinell
+    \item Vickers
+    \item und Rockwell
+\end{itemize}
+etabliert.\par\medskip
+
+In allen drei Fällen wird ein genormter Prüfkörper unter genormten Bedingungen in den Prüfling eingedrückt und im Anschluss
+der zurückgebliebene Abdruck gemessen.
+
+{
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[h]
+    \begin{adjustbox}{width=\textwidth}
+        \begin{tabular}{@{}llll@{}}
+            \toprule
+            \textbf{Prüfverfahren}  & \textbf{Prüfkörper}                                                                                                           & \textbf{Messgröße}                                    & \textbf{Gleichung}                                    \\ \midrule
+            Brinell                 & \begin{tabular}[c]{@{}l@{}}Kugel aus\\ gehärtetem Stahl\\ \(D=1-10 \SI{}{mm}\)\\\end{tabular}                                   & Durchmesser \(d\) des Eindrucks                       & \(HB=0,102\cdot\frac{F}{A}\)                               \\
+            Vickers                 & \begin{tabular}[c]{@{}l@{}}Diamantpyramide mit\\ Spitzenwinkel \(\varphi=\SI{136}{\degree}\)\\\end{tabular}                     & Diagonale \(d\) des Eindrucks entlang der Oberfläche  & \(HV=0,189\cdot\frac{F}{d^2}\)                             \\
+            Rockwell C              & \begin{tabular}[c]{@{}l@{}}Diamantkegel Spitzenwinkel \(\varphi=\SI{120}{\degree}\)\\\end{tabular}                              & Eindrucktiefe \(t_b\)                                 & \(HRC=100-\frac{\SI{0,2}{mm}-t_b}{\SI{0,002}{mm}}\)   \\
+            Rockwell B              & Stahlkugel \(D=\SI{0,0625}{mm}\)                                                                                              & Eindrucktiefe \(t_b\)                                 & \(HRB=130-\frac{\SI{0,26}{mm}-t_b}{\SI{0,002}{mm}}\)  \\ \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+\end{table}
+}
+
+Erwähnenswert ist, dass jeweils die Gleichungen für Brinell wie für Vickers einen Faktor \(0,102\) beinhalten. Dieser
+stammt aus der mittlerweile sogar gesetzlich untersagten Einheit des \textit{Kiloponds} welches definiert war durch
+die Kraft, die die sonderbar gewählte Schwerebeschleunigung an der Erdoberfläche auf die Masse eines Kilogramms ausübt
+oder anders gesagt
+\begin{equation} 
+    \SI{1}{kp} = g_N \cdot \SI{1}{kg} = \SI{9,80665}{N}
+\end{equation}
+Die Härtemaße waren wohl ursprünglich auf das Kilopond bezogen. Der scheinbar vom Himmel gefallene Faktor ist also ein
+Umrechnungsfaktor von Kilopond zu Newton mit dem Kehrwert der Schwerebeschleunigung gemäß
+\begin{equation}
+    \SI{1}{N} = \SI{1}{kp} \cdot 0,102
+\end{equation}
